@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4e4ba;
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-height: 45vh;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+form input {
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  height: 3rem;
+  padding-left: 0.5rem;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
+  gap: 1rem;
+}
+
+.dropdown i {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #af4d98;
+  flex: 0 0 auto;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+  background: #fdfdfd;
+  padding: 0.2rem 0.5rem;
+}
+
+.select-container img {
+  max-width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.select-container select {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.msg {
+  margin: 1.5rem 0;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+
+form button {
+  height: 3rem;
+  background-color: #af4d98;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #922d7b;
+}
+
+/* 📱 Small devices (phones) */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .select-container {
+    width: 100%; 
+    justify-content: flex-start;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dropdown i {
+    transform: rotate(90deg);
+    margin: 0.5rem auto;
+  }
+}
+
+/* 💻 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .dropdown {
+    gap: 1.5rem;
+  }
+
+  .select-container {
+    width: 8rem;
+  }
+}
